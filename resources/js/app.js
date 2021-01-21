@@ -5,28 +5,16 @@ require('./bootstrap');
 
 
 import { createApp } from 'vue'
-import { createRouter, createWebHistory } from 'vue-router'
+
+import router from './router/router'
 // import App from './components/App.vue'
 
-const Home = {
-  template: `<div>home</div>`,
-}
 
-const Foo = { template: '<div>foo</div>' }
-const Bar = { template: '<div>bar</div>' }
-
-const router = createRouter({
-  history: createWebHistory(),
-  routes: [
-    { path: '/', component: Home },
-    { path: '/foo', component: Foo },
-    { path: '/bar', component: Bar },
-  ],
-})
-
-createApp({
+const vue = createApp({
   name: 'Apps'
 }).use(router).mount('#app')
+
+
 
 // const app = createApp({})
 // app.use(router)
