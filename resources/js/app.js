@@ -15,6 +15,12 @@ const vue = createApp({
 }).use(router).mount('#app')
 
 
+// const log = (text) => {
+//   console.log(text)
+// }
+// vue.config.globalProperties.$l() = log;
+
+
 
 // const app = createApp({})
 // app.use(router)

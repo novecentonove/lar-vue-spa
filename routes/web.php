@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Spatie\Permission\Models\Permission;
+use App\Http\Controllers\User\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,10 +18,20 @@ require __DIR__.'/auth.php';
 
 
 Route::get('{any}', function () {
+    // dd(auth()->user()->email);
+
+    // auth()->user()->givePermissionTo('see hidden menu');
     return view('homepage');
 })
-->where('any', '.*')
+->where('any', '^(?!api).*$')
 ->middleware(['auth']);
+
+
+Route::prefix('api')->group(function () {
+    Route::get('/user', [UserController::class, 'getAuthUser']);
+});
+
+
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

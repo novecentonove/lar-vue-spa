@@ -7,6 +7,10 @@
 
         <title>{{ config('app.name', 'Laravel') }}</title>
 
+        <link rel="icon" href="public/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon" />
+
+
         <!-- Fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
 
@@ -22,12 +26,9 @@
             <!-- Page Content -->
             <main>
                 <div id="app">
-                    <ul>
-                      <li><router-link to="/">Home</router-link></li>
-                      <li><router-link to="/foo">Foo</router-link></li>
-                      <li><router-link to="/bar">Bar</router-link></li>
-                    </ul>
-                    <router-view></router-view>
+                   
+                        <router-view></router-view>
+                    
                   </div>
             </main>
         </div>

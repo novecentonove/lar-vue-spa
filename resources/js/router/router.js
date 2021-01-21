@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 
-import Home from '../components/Home'
+import Home from '../pages/Home'
 
 const Foo = { template: '<div>foo</div>' }
 const Bar = { template: '<div>bar</div>' }
