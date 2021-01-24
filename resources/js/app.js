@@ -9,9 +9,14 @@ import { createApp } from 'vue'
 import router from './router/router'
 // import App from './components/App.vue'
 
+import HomePage from './HomePage.vue'
+
 
 const vue = createApp({
-  name: 'Apps'
+  name: 'Apps',
+  components: {
+    HomePage
+  }
 }).use(router).mount('#app')
 
 

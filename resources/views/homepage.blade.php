@@ -26,9 +26,7 @@
             <!-- Page Content -->
             <main>
                 <div id="app">
-                   
-                        <router-view></router-view>
-                    
+                    <home-page />
                   </div>
             </main>
         </div>

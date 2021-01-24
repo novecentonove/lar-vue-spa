@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
 
-import Home from '../pages/Home'
+// import Home from '../pages/Home'
 
 const Foo = { template: '<div>foo</div>' }
 const Bar = { template: '<div>bar</div>' }
@@ -10,7 +10,7 @@ const NotFound = { template: '<div>NotFound</div>' }
 const router = createRouter({
 history: createWebHistory(),
 routes: [
-    { path: '/', component: Home },
+    { path: '/', component: () => import( /* webpackChunkName: "home" */ '../pages/Home')},
     { path: '/foo', component: Foo },
     { path: '/bar', component: Bar },
     { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
